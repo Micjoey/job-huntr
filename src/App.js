@@ -1,21 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import ApplicationList from './components/ApplicationList';
+
+const applications = [
+    {
+        company_name: "Fountain",
+        role: "Frontend Engineer (React)",
+        application_date: new Date("March 26, 2018"),
+        status: "tech-call",
+        contact: "jaci@fountain.com",
+        link: "fountain.com"
+    }, {
+        company_name: "Resource",
+        role: "Fullstack Engineer",
+        application_date: new Date("March 22, 2018"),
+        status: "coffee meeting",
+        contact: "troy@resource.io",
+        link: "resource.io"
+    }
+];
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+
+
+        return (<div className="App">
+            <ApplicationList applications={applications}/>
+        </div>);
+    }
 }
 
 export default App;

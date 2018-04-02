@@ -26,13 +26,6 @@ mongoose.connection.on('error', function() {
     process.exit(1);
 });
 
-app.get('/', function(req, res) {
-    if (req.user) {
-        res.json()
-    } else {
-        res.redirect('/login')
-    }
-});
 
 
 console.log('Express started. Listening on port', process.env.PORT || 3000);
