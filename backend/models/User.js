@@ -5,14 +5,7 @@ let connect = process.env.MONGODB_URI;
 mongoose.connect(connect);
 
 const userSchema = new mongoose.Schema({
-    email: {
-        type: String
-    },
-    f_name: {
-        type: String,
-        required: true
-    },
-    l_name: {
+    username: {
         type: String,
         required: true
     },

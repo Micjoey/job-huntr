@@ -1,14 +1,15 @@
 import React from 'react';
 import ApplicationItem from './ApplicationItem';
 
-const ApplicationList = ({applications}) => {
+class ApplicationList extends React.Component {
+    render() {
         return(
             <div>
                 <ul>
-                    {applications.map((item) => <ApplicationItem key={item.company_name} application={item}/>)}
+                    {this.props.applications.map((item) => <ApplicationItem updateStatus={this.props.updateStatus} key={item._id} application={item}/>)}
                 </ul>
             </div>);
-
+    }
 }
 
 export default ApplicationList;

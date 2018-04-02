@@ -22,8 +22,7 @@ const applicationSchema = new mongoose.Schema({
         required: true
     },
     notes: {
-        type: String,
-        required: false
+        type: String
     },
     contact: {
         type: String
